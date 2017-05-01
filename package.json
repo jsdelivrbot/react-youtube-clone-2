@@ -2,6 +2,8 @@
   "name": "react-youtube-clone",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
+
   "dependencies": {
     "lodash": "^4.17.4",
     "react": "^15.5.4",
@@ -16,6 +18,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+   "prod": "NODE_ENV=production node server.js",
+   "postinstall": "webpack -p"
   }
 }
